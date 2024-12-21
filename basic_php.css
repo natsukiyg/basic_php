@@ -1,0 +1,126 @@
+/* 全体の背景とフォント設定 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* フォーム全体のスタイル */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /*フォームを中央に配置*/
+    box-sizing: border-box; /*パディングとボーダーを幅に含める*/
+}
+
+/* ヘッダー */
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* 各フィールドセットのスタイル */
+fieldset {
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* フィールドセット内レジェンド（セクションタイトル）のラベル */
+legend {
+    font-weight: bold;
+    color: #333;
+}
+
+/* ラベルのスタイル */
+label {
+    display: block; /*ラベルをブロック表示で縦に並べる*/
+    margin-bottom: 8px;/*ラベル間のスペース*/
+    color: #555;
+}
+
+/* 入力フィールドのスタイル */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+/*input[type="radio"],*/
+select,
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /*パディングとボーダーを幅に含める*/
+}
+
+/* ラジオボタン・チェックボックス */
+input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* テキストエリア */
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* サブミットボタンのスタイル */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* メッセージのスタイル */
+#response {
+    text-align: center;
+    font-size: 1.2em;
+    color: #28a745;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+/*メッセージのアニメーション*/
+#response.show {
+    opacity: 1;
+}
+
+/* エラーメッセージ */
+.error {
+    color: #dc3545;
+    font-size: 1em;
+}
+
+/*レスポンシブデザイン*/
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px 15px;
+    }
+}
