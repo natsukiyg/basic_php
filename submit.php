@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             //CSVの各行を最後まで読み込んで配列に保存
             while(($row = fgetcsv($handle)) !== FALSE) {
-                $lastId = $row[0]; //最後の行の会員番号を取得
+                $lastId = (int)$row[0]; //最後の行の会員番号を取得 文字列を整数にキャスト
             }
             fclose($handle);
         }

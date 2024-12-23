@@ -1,0 +1,55 @@
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif; /* フォントを見やすく設定 */
+    background-color: #f0f8ff;  /* 明るい背景色 */
+    line-height: 1.6;
+    margin: 20px;
+    background-image: url();
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    opacity: 0.9;
+}
+
+/* ヘッダーのスタイル */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* テーブルのスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse; /* ボーダーが重ならないようにする */
+    margin-top: 20px;
+    table-layout: fixed; /* 列幅を均等に */
+}
+
+th, td {
+    padding: 12px 20px; /* セル内の余白を広めに */
+    text-align: left; /* 左寄せ */
+    border: 1px solid #ddd; /* ボーダーを薄く */
+    word-wrap: break-word; /* 長い文字列を折り返し */
+}
+
+th {
+    background-color: #f4f4f4; /* ヘッダーの背景色 */
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* 偶数行の背景色を薄く */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* 行にカーソルを乗せたときの背景色 */
+}
+
+/* 小さな画面でも見やすいようにテーブルをスクロール可能にする */
+@media screen and (max-width: 768px) {
+    table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+}

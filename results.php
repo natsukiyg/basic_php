@@ -29,7 +29,7 @@ if (($handle = fopen($csvFile, 'r')) !== FALSE) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登録データ</title>
-    <link rel="stylesheet" href="basic_php.css">
+    <link rel="stylesheet" href="results.css">
 </head>
 <body>
     <h1>登録データ</h1>
@@ -39,6 +39,7 @@ if (($handle = fopen($csvFile, 'r')) !== FALSE) {
             <thead>
                 <tr>
                     <!-- CSVのヘッダーを表示 -->
+                    <th>会員番号</th>
                     <th>氏名</th>
                     <th>性別</th>
                     <th>誕生日</th>
@@ -53,14 +54,15 @@ if (($handle = fopen($csvFile, 'r')) !== FALSE) {
                 <?php foreach ($membersData as $row): ?>
                     <tr>
                         <!-- CSVのデータを表示 -->
-                        <td><?php echo htmlspecialchars($row[0]); ?></td>  <!-- 氏名 -->
-                        <td><?php echo htmlspecialchars($row[1]); ?></td>  <!-- 性別 -->
-                        <td><?php echo htmlspecialchars($row[2]); ?></td>  <!-- 誕生日 -->
-                        <td><?php echo htmlspecialchars($row[3]); ?></td>  <!-- メールアドレス -->
-                        <td><?php echo htmlspecialchars($row[4]); ?></td>  <!-- 住所 -->
-                        <td><?php echo htmlspecialchars($row[5]); ?></td>  <!-- 所属施設 -->
-                        <td><?php echo htmlspecialchars($row[6]); ?></td>  <!-- 知ったきっかけ -->
-                        <td><?php echo htmlspecialchars($row[7]); ?></td>  <!-- 期待する機能 -->
+                        <td><?php echo htmlspecialchars($row[0]); ?></td>  <!-- 会員番号 -->
+                        <td><?php echo htmlspecialchars($row[1]); ?></td>  <!-- 氏名 -->
+                        <td><?php echo htmlspecialchars($row[2]); ?></td>  <!-- 性別 -->
+                        <td><?php echo htmlspecialchars($row[3]); ?></td>  <!-- 誕生日 -->
+                        <td><?php echo htmlspecialchars($row[4]); ?></td>  <!-- メールアドレス -->
+                        <td><?php echo htmlspecialchars($row[5]); ?></td>  <!-- 住所 -->
+                        <td><?php echo htmlspecialchars($row[6]); ?></td>  <!-- 所属施設 -->
+                        <td><?php echo htmlspecialchars($row[7]); ?></td>  <!-- 知ったきっかけ -->
+                        <td><?php echo htmlspecialchars($row[8]); ?></td>  <!-- 期待する機能 -->
                     </tr>
                 <?php endforeach; ?>
             </tbody>
